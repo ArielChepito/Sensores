@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 26
     defaultConfig {
-        applicationId "com.eduardo.www.pagerexample"
+        applicationId "com.udb.sv.Sensores"
         minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
