@@ -38,7 +38,7 @@
         tools:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/wechatLoginButton"
+        android:id="@+id/btnMagnetrometro"
         android:layout_width="147dp"
         android:layout_height="33dp"
         android:layout_marginBottom="8dp"

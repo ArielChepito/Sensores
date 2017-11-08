@@ -1,6 +1,7 @@
 package com.udb.sv.Sensores.Fragments;
 
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -11,8 +12,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.VideoView;
 
+import com.udb.sv.Sensores.Activities.*;
 import com.udb.sv.Sensores.R;
 
 
@@ -67,8 +70,8 @@ public class gps extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        /*getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);*/
         return inflater.inflate(R.layout.fragment_gps, container, false);
     }
     @Override
@@ -78,7 +81,20 @@ public class gps extends Fragment {
 
         try
         {
-            VideoView mVideoView= view.findViewById(R.id.bgVideoView3);
+
+            Button boton = view.findViewById(R.id.btnGPS);
+            boton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), gpsActivity.class);
+                    startActivity(intent);
+
+                }
+            });
+
+
+
+            /*VideoView mVideoView= view.findViewById(R.id.bgVideoView3);
 
             Uri uri = Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.gps);
             Log.d("URL",uri +"");
@@ -90,7 +106,7 @@ public class gps extends Fragment {
                 public void onPrepared(MediaPlayer mediaPlayer) {
                     mediaPlayer.setLooping(true);
                 }
-            });
+            });*/
 
         }
         catch(Exception e)

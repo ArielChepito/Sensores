@@ -1,6 +1,7 @@
 package com.udb.sv.Sensores.Fragments;
 
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.net.Uri;
@@ -11,8 +12,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.VideoView;
 
+import com.udb.sv.Sensores.Activities.AcelerometroActivity;
 import com.udb.sv.Sensores.R;
 
 
@@ -67,8 +70,10 @@ public class acelerometro extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        getActivity().setRequestedOrientation(
-                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+       /* getActivity().setRequestedOrientation(
+                ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);*/
+
+
         return inflater.inflate(R.layout.fragment_acelerometro, container, false);
     }
     @Override
@@ -76,8 +81,17 @@ public class acelerometro extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         try
         {
-            VideoView mVideoView= view.findViewById(R.id.bgVideoView);
 
+            Button boton = view.findViewById(R.id.btnAcelerometro);
+            boton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(getActivity(), AcelerometroActivity.class);
+                    startActivity(intent);
+
+                }
+            });
+            /*VideoView mVideoView= view.findViewById(R.id.bgVideoView);
             Uri uri = Uri.parse("android.resource://"+getActivity().getPackageName()+"/"+R.raw.acelerometro);
             Log.d("URL",uri +"");
             mVideoView.setVideoURI(uri);
@@ -88,7 +102,10 @@ public class acelerometro extends Fragment {
                 public void onPrepared(MediaPlayer mediaPlayer) {
                     mediaPlayer.setLooping(true);
                 }
-            });
+            });*/
+
+
+
 
         }
         catch(Exception e)
