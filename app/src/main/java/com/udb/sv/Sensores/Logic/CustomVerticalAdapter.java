@@ -75,6 +75,18 @@ public class CustomVerticalAdapter extends PagerAdapter {
         else if(parentInt == 2 && position == 0){
             fragmentManager.beginTransaction().replace(idGen, gps.newInstance(String.valueOf(parentInt), String.valueOf(position))).commit();
         }
+        else if(parentInt == 3 && position == 0){
+            fragmentManager.beginTransaction().replace(idGen, fragment_barometro.newInstance(String.valueOf(parentInt), String.valueOf(position))).commit();
+        }
+        else if(parentInt == 4 && position == 0){
+            fragmentManager.beginTransaction().replace(idGen, giroscopioFragment.newInstance(String.valueOf(parentInt), String.valueOf(position))).commit();
+        }
+        else if(parentInt == 5 && position == 0){
+            fragmentManager.beginTransaction().replace(idGen, luxometroFragment.newInstance(String.valueOf(parentInt), String.valueOf(position))).commit();
+        }
+        else if(parentInt == 6 && position == 0){
+            fragmentManager.beginTransaction().replace(idGen, proximidadFragment.newInstance(String.valueOf(parentInt), String.valueOf(position))).commit();
+        }
 /*
         else if(parentInt == 1 && position == 1)
         {

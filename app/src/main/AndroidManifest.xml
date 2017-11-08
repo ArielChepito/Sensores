@@ -3,10 +3,9 @@
     package="com.udb.sv.Sensores">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
-    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
-    <uses-permission android:name="android.permission.READ_LOGS"/>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
         android:allowBackup="true"
@@ -28,7 +27,14 @@
             android:label="@string/title_activity_acelerometro"
             android:theme="@style/AppTheme" />
         <activity android:name=".Activities.magnetrometroActivity" />
-        <activity android:name=".Activities.gpsActivity"></activity>
+        <activity android:name=".Activities.gpsActivity" />
+        <activity android:name=".Activities.barometroActivity" />
+        <activity android:name=".Activities.giroscopioActivity" />
+        <activity
+            android:name=".Activities.luxumetroActivity"
+            android:label="@string/title_activity_luxumetro"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Activities.proximidadActivity"></activity>
     </application>
 
 </manifest>

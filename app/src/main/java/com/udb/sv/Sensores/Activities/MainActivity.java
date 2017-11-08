@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     private DoubleViewPager viewPager;
-    private int horizontalChild = 3;
+    private int horizontalChild = 7;
     private int verticalChild = 1;
 
     @Override
