@@ -36,14 +36,16 @@ public class proximidadActivity extends AppCompatActivity implements SensorEvent
         String text = String.valueOf(event.values[0]);
         tv.setText(text);
         float valor = Float.parseFloat(text);
-        if(valor == 3){
+        if(valor == 1){
 
-            ln.setBackgroundColor(Color.GREEN);
+            ln.setBackgroundColor(Color.rgb(48,63,159));
+            tv.setText("LEJOS");
         }
 
         else{
 
-            ln.setBackgroundColor(Color.RED);
+            ln.setBackgroundColor(Color.rgb(68,138,255));
+            tv.setText("CERCA");
 
         }
 
